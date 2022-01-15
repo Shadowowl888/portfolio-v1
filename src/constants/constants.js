@@ -3,7 +3,7 @@ export const projects = [
     title: "School Simplified",
     description:
       "School Simplified is a non-profit organization dedicated to the development and improvement of students ranging from ages 13+",
-    image: "/images/School.png",
+    image: "/images/School.jpg",
     tags: ["React", "Typescript", "NextJS", "Chakra UI", "Rest API"],
     source: "https://schoolsimplified.org",
     visit: "https://github.com/HazimAr/School-Simplified",
