@@ -68,7 +68,7 @@ const Timeline = () => {
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
         I'm Devin, self-taught software developer and started programming as a
-        hobby. I'm currently a student based in Las Angeles, US
+        hobby. I'm currently a student based in Los Angeles, CA
         <br />
         <br />
         I've been enjoying programming since I first began. I love supporting
@@ -84,16 +84,20 @@ const Timeline = () => {
               final={index === TOTAL_CAROUSEL_COUNT - 1}
             >
               <CarouselItem
-                item={index}
-                id={`carousel_item-${index}`}
+                index={index}
+                id={`carousel__item-${index}`}
                 active={activeItem}
                 onClick={(e) => handleClick(e, index)}
               >
                 <CarouselItemTitle>
-                  {item.year}
-                  <CarouselItemImg>
-                    width="208" height="6" viewBox="0 0 208 6" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                  {`${item.year}`}
+                  <CarouselItemImg
+                    width="208"
+                    height="6"
+                    viewBox="0 0 208 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
@@ -127,18 +131,21 @@ const Timeline = () => {
         </>
       </CarouselContainer>
       <CarouselButtons>
-        {TimeLineData.map((item, index) => (
-          <CarouselButton
-            key={index}
-            index={index}
-            active={activeItem}
-            onClick={(e) => handleClick(e, index)}
-            type="button"
-          >
-            <CarouselButtonDot active={activeItem} />
-          </CarouselButton>
-        ))}
+        {TimeLineData.map((item, index) => {
+          return (
+            <CarouselButton
+              key={index}
+              index={index}
+              active={activeItem}
+              onClick={(e) => handleClick(e, index)}
+              type="button"
+            >
+              <CarouselButtonDot active={activeItem} />
+            </CarouselButton>
+          );
+        })}
       </CarouselButtons>
+      <SectionDivider />
     </Section>
   );
 };

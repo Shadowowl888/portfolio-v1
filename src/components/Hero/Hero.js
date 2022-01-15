@@ -20,7 +20,7 @@ const Hero = (props) => (
         I'm a self taught entry-level software engineer and programming is my
         hobby working with React and NextJS.
       </SectionText>
-      <Button onClick={() => (window.location = "khundevin@gmail.com")}>
+      <Button onClick={() => (window.location = "mailto:khundevin@gmail.com")}>
         Learn More
       </Button>
     </LeftSection>
